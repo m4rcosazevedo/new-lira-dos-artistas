@@ -1,0 +1,5 @@
+export * from './Hero/Hero'
+export * from './About/About'
+export * from './Videos/Videos'
+export * from './Songs/Songs'
+export * from './Contact/Contact'

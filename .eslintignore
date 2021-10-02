@@ -1,0 +1,4 @@
+*.scss
+*.css
+
+src/presentation/assets/*

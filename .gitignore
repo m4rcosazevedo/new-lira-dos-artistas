@@ -1,0 +1,10 @@
+# node modules
+node_modules
+
+# dist
+dist
+
+# yarn error
+yarn-error.log
+
+credentials.ts

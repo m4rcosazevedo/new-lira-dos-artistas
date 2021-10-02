@@ -1,0 +1,121 @@
+#videos {
+  position: relative;
+  background: url("@presentation/assets/images/texture.jpg") repeat top center;
+  color: #313131;
+
+  .meta-info {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+
+    .col-left,
+    .col-right {
+      width: 100%;
+    }
+
+    .col-left {
+      flex-wrap: wrap;
+      display: flex;
+      margin-right: -10px;
+      margin-left: -10px;
+
+      .col {
+        position: relative;
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 20px;
+      }
+
+      .item {
+        position: relative;
+        overflow: hidden;
+        text-transform: uppercase;
+
+        &:before {
+          content: '';
+          position: absolute;
+          background: url("@presentation/assets/images/youtube-icone.png") no-repeat center center;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+
+        a {
+          display: block;
+        }
+
+        img {
+          max-width: 100%;
+          width: 100%;
+          display: block;
+        }
+
+        &:hover .hover {
+          opacity: 1;
+          zoom: 1;
+        }
+
+        .hover {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 40px 20px;
+          background: #000228;
+          opacity: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          color: #fff;
+          transition: opacity 0.3s ease;
+        }
+
+        button {
+          background: red;
+          margin-top: 15px;
+          padding: 5px 10px;
+          border: 0;
+          color: #fff;
+          font-size: 14px;
+          cursor: pointer;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .col-right {
+      h2 {
+        font-size: 3em;
+        color: red;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      a {
+        color: #f00;
+        text-decoration: none;
+        border: 1px solid red;
+        padding: 5px 10px;
+        display: inline-block;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: red;
+          color: #fff;
+          
+        }
+      }
+    }
+  }
+}

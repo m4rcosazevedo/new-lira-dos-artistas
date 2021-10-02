@@ -1,0 +1,45 @@
+#contact {
+  position: relative;
+  background: url('@presentation/assets/images/contact.jpg') no-repeat center center/cover;
+
+  &:before {
+    content: '';
+    background: rgba(0, 0, 0, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .meta-info {
+    position: relative;
+    z-index: 2;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    padding: 0;
+    li {  
+      margin: 0 5px 10px;
+      a {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        color: #fff;
+        border: 1px solid #fff;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        &:hover {
+          color: #00b253;
+          border-color: #00b253;
+        }
+      }
+    }
+  }
+}
