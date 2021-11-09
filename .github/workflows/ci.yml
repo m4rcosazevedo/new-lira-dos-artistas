@@ -16,13 +16,13 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install
-        env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-          GOOGLE_YOUTUBE_CHANNEL_ID: ${{ secrets.GOOGLE_YOUTUBE_CHANNEL_ID }}
-      - name: Build web-app
+      - name: Create environment variables
         run: |
-          echo $GOOGLE_API_KEY
-          echo $GOOGLE_YOUTUBE_CHANNEL_ID
+          touch .env
+          echo GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }} >> .env
+          echo GOOGLE_YOUTUBE_CHANNEL_ID=${{ secrets.GOOGLE_YOUTUBE_CHANNEL_ID }} >> .env
+      - name: Build Web App - Lira dos Artistas
+        run: |
           yarn build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
