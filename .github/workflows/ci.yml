@@ -5,10 +5,6 @@ on:
     branches:
       - master
 
-env:
-  GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-  GOOGLE_YOUTUBE_CHANNEL_ID: ${{ secrets.GOOGLE_YOUTUBE_CHANNEL_ID }}
-
 jobs:
   deploy:
     runs-on: ubuntu-18.04
@@ -17,9 +13,16 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-      - name: Build web-app
+      - name: Install dependencies
         run: |
           yarn install
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_YOUTUBE_CHANNEL_ID: ${{ secrets.GOOGLE_YOUTUBE_CHANNEL_ID }}
+      - name: Build web-app
+        run: |
+          echo $GOOGLE_API_KEY
+          echo $GOOGLE_YOUTUBE_CHANNEL_ID
           yarn build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
