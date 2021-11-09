@@ -1,6 +1,7 @@
 {
   "name": "@marcospca/liradosartistas",
   "version": "1.0.0",
+  "main": "main.js",
   "license": "MIT",
   "author": "Marcos Azevedo <m4rcos.azevedo@gmail.com>",
   "dependencies": {
