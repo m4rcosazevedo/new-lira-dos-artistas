@@ -7,7 +7,6 @@ dist
 # yarn error
 yarn-error.log
 
-credentials.ts
 .env
 .env.*
 !.env.example
