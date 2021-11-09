@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const Dotenv = require('dotenv-webpack')
 
 const DEVELOPMENT = 'development'
 const PRODUCTION = 'production'
@@ -101,6 +102,7 @@ const config = {
   },
 
   plugins: [
+    new Dotenv(),
     new webpack.SourceMapDevToolPlugin({}),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({

@@ -8,3 +8,6 @@ dist
 yarn-error.log
 
 credentials.ts
+.env
+.env.*
+!.env.example
